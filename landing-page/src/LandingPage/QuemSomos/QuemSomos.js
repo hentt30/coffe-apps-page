@@ -3,29 +3,32 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #1a1a1a;
 `;
-
 
 const StyledGrid = styled(Grid)`
-    display: flex;
-    justify-content: center;
+  display: inline-flex;
+  justify-content: center;
 `;
 
-
 export default function QuemSomos() {
-    return (
-        <Wrapper>
-            <Grid container direction="row" alignItems="center">
-                <StyledGrid item xs >
-                    Arquivo JS da imagem e tals
-                </StyledGrid>
-                <StyledGrid item xs display="flex" justifyContent="center">
-                    Arquivo JS do texto e tals
-                </StyledGrid>
-            </Grid>
-        </Wrapper>
-    );
-};
+  return (
+    <Wrapper>
+      <Grid container direction="row" alignItems="center">
+        <StyledGrid item xs>
+          <img
+            style={{ width: "65vw", height: "100vh" }}
+            src={window.location.origin + "/coffee.jpg"}
+            alt="imagem qualquer"
+          />
+        </StyledGrid>
+        <StyledGrid item xs display="flex" justifyContent="center">
+          Arquivo JS do texto e tals
+        </StyledGrid>
+      </Grid>
+    </Wrapper>
+  );
+}

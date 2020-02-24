@@ -7,28 +7,28 @@ import QuemSomos from "./QuemSomos/QuemSomos.js";
 import Projetos from "./Projetos/Projetos";
 
 const theme = createMuiTheme({
-    typography: {
-        fontFamily: [
-            "Nunito",
-            "Roboto",
-            '"Helvetica Neue"',
-            "Arial",
-            "sans-serif"
-        ].join(",")
-    }
+  typography: {
+    fontFamily: [
+      "Nunito",
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif"
+    ].join(",")
+  }
 });
 
 class LandingPage extends React.Component {
-    render() {
-        return (
-            <Grid container>
-                <ThemeProvider theme={theme}>
-                    <Projetos />
-                    <QuemSomos />
-                </ThemeProvider>
-            </Grid>
-        );
-    }
+  render() {
+    return (
+      <Grid container>
+        <ThemeProvider theme={theme}>
+          <QuemSomos />
+          <Projetos />
+        </ThemeProvider>
+      </Grid>
+    );
+  }
 }
 
 export default LandingPage;
