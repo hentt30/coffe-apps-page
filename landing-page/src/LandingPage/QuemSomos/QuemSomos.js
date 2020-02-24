@@ -1,27 +1,25 @@
 import React from "react";
-// import Typography from "@material-ui/core/Typography";
+import FirstWrapper from "./FirstWrapper";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from '@material-ui/core/styles';
+import styled from "styled-components";
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1
-    }
-}));
+const StyledGrid = styled(Grid)`
+    display: flex;
+    justify-content: center;
+`;
+
 
 export default function QuemSomos() {
-    const classes = useStyles();
-
     return (
-        <div className={classes.root}>
-            <Grid container direction="row" alignItems="center" spacing={10}>
-                <Grid item xs={6}>
-                    IMAGEM
-                </Grid>
-                <Grid item xs={6}>
-                    Rubens Aguiar
-                </Grid>
+        <FirstWrapper>
+            <Grid container direction="row" alignItems="center">
+                <StyledGrid item xs >
+                    Arquivo JS da imagem e tals
+                </StyledGrid>
+                <StyledGrid item xs display="flex" justifyContent="center">
+                    Arquivo JS do texto e tals
+                </StyledGrid>
             </Grid>
-        </div>
+        </FirstWrapper>
     );
 };

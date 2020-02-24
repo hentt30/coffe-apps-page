@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 class LandingPage extends React.Component {
     render() {
         return (
-            <Grid container spacing={3}>
+            <Grid container>
                 <ThemeProvider theme={theme}>
                     <QuemSomos />
                 </ThemeProvider>
