@@ -4,6 +4,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
 import QuemSomos from "./QuemSomos/QuemSomos.js";
+import Projetos from "./Projetos/Projetos";
 
 const theme = createMuiTheme({
     typography: {
@@ -22,6 +23,7 @@ class LandingPage extends React.Component {
         return (
             <Grid container>
                 <ThemeProvider theme={theme}>
+                    <Projetos />
                     <QuemSomos />
                 </ThemeProvider>
             </Grid>
