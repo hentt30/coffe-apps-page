@@ -14,11 +14,10 @@ import DialogActions from "@material-ui/core/DialogActions";
 import styled from "styled-components";
 
 const StyledCard = styled(Card)`
-  max-width: 345px;
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 140px;
+  height: 583px;
 `;
 
 export default class MediaCard extends React.Component {
@@ -43,19 +42,17 @@ export default class MediaCard extends React.Component {
   render() {
     return (
       <StyledCard>
-        {console.log(this.props)}
         <CardActionArea onClick={this.handleClickOpen}>
           <StyledCardMedia
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
+            image={this.props.img}
+            title={this.props.title}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              {this.props.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {this.props.subtitle}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -66,12 +63,11 @@ export default class MediaCard extends React.Component {
           aria-describedby="alert-dialog-description"
         >
           <DialogTitle id="alert-dialog-title">
-            {"Use Google's location service?"}
+            {this.props.title}
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              Let Google help apps determine location. This means sending
-              anonymous location data to Google, even when no apps are running.
+              {this.props.description}
             </DialogContentText>
           </DialogContent>
           <DialogActions>

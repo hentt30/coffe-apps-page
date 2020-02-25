@@ -5,6 +5,9 @@ import { ThemeProvider } from "@material-ui/styles";
 
 import QuemSomos from "./QuemSomos/QuemSomos.js";
 import Projetos from "./Projetos/Projetos";
+import styled from "styled-components";
+
+
 
 const theme = createMuiTheme({
   typography: {
