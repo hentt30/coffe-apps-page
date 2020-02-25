@@ -4,10 +4,9 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
 import QuemSomos from "./QuemSomos/QuemSomos.js";
-import Projetos from "./Projetos/Projetos";
+import AppBar from "./NavBar/NavBar.js";
+import Projetos from "./Projetos/Projetos"; // eslint-disable-next-line
 import styled from "styled-components";
-
-
 
 const theme = createMuiTheme({
   typography: {
@@ -26,6 +25,7 @@ class LandingPage extends React.Component {
     return (
       <Grid container>
         <ThemeProvider theme={theme}>
+          <AppBar />
           <QuemSomos />
           <Projetos />
         </ThemeProvider>
