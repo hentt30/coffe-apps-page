@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledGrid = styled(Grid)`
-  max-width: 384px;
+  max-width: 400px;
   padding: 10px 0px 10px;
 `;
 
@@ -73,7 +73,7 @@ export default function Projetos() {
   const lin = 0;
 
   return (
-    <Wrapper>
+    <Wrapper id="projetos">
       <Grid container justify="center" alignItems="center">
         <Typography variant="h2">Projetos</Typography>
       </Grid>

@@ -11,7 +11,8 @@ import InputBase from "@material-ui/core/InputBase";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    fontFamily: "lato"
+    fontFamily: "lato",
+    marginBottom: '64px',
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -58,11 +59,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
+      {console.log(props)}
       <AppBar position="fixed" color="secondary">
         <Toolbar>
           <Grid item xs={1}>
@@ -72,10 +74,12 @@ export default function ButtonAppBar() {
             <Button color="inherit">Home</Button>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">Sobre</Button>
+            <Button color="inherit" onClick={() => {
+              props.handler("QUEM_SOMOS")
+            }}>Sobre</Button>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">Projetos</Button>
+            <Button color="inherit" href="#projetos">Projetos</Button>
           </Grid>
           <Grid item xs={1}>
             <Button color="inherit">Contato</Button>

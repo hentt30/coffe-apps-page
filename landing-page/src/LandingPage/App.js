@@ -7,6 +7,7 @@ import QuemSomos from "./QuemSomos/QuemSomos.js";
 import AppBar from "./NavBar/NavBar.js";
 import Projetos from "./Projetos/Projetos"; // eslint-disable-next-line
 import styled from "styled-components";
+import Toolbar from "@material-ui/core/Toolbar";
 
 const theme = createMuiTheme({
   typography: {
@@ -21,13 +22,30 @@ const theme = createMuiTheme({
 });
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.scrollQuemSomos = React.createRef();
+    this.scrollProjetos = React.createRef();
+    this.handler = this.handler.bind(this);
+  }
+
+  handler(id) {
+    if(id === "QUEM_SOMOS") {
+      this.scrollQuemSomos.current.scrollIntoView({behavior: 'smooth'});
+    }
+    if(id === "PROJETOS") {
+      this.scrollProjetos.current.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
   render() {
     return (
       <Grid container>
         <ThemeProvider theme={theme}>
-          <AppBar />
-          <QuemSomos />
-          <Projetos />
+          {console.log(this.state)}
+          <AppBar handler={this.handler} />
+          <QuemSomos ref={this.scrollQuemSomos} />
+          <Projetos ref={this.scrollProjetos} />
         </ThemeProvider>
       </Grid>
     );

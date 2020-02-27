@@ -17,7 +17,7 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 583px;
+  height: 450px;
 `;
 
 export default class MediaCard extends React.Component {
