@@ -7,6 +7,7 @@ import LocalCafeIcon from "@material-ui/icons/LocalCafe";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,29 +76,43 @@ export default function ButtonAppBar(props) {
             />
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">
-              <b>Home</b>
-            </Button>
-          </Grid>
-          <Grid item xs={1}>
-            <Button
-              color="inherit"
-              onClick={() => {
-                props.handler("QUEM_SOMOS");
-              }}
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
-              <b>Sobre</b>
-            </Button>
+              <b>Home</b>
+            </Link>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit" href="#projetos">
+            <b>Sobre</b>
+          </Grid>
+          <Grid item xs={1}>
+            <Link
+              activeClass="active"
+              to="projetos"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <b>Projetos</b>
-            </Button>
+            </Link>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">
+            <Link
+              activeClass="active"
+              to="contato"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <b>Contato</b>
-            </Button>
+            </Link>
           </Grid>
           <Grid item xs={4}></Grid>
           <Grid item xs={3}>

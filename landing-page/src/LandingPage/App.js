@@ -3,10 +3,12 @@ import Grid from "@material-ui/core/Grid";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
-import QuemSomos from "./QuemSomos/QuemSomos.js";
+import Home from "./Home/Home.js";
 import AppBar from "./NavBar/NavBar.js";
-import Projetos from "./Projetos/Projetos"; // eslint-disable-next-line
+import Projetos from "./Projetos/Projetos";
+import Contato from "./Contato/Contato";
 import styled from "styled-components";
+import * as Scroll from "react-scroll"; // eslint-disable-next-line
 import Toolbar from "@material-ui/core/Toolbar";
 
 const theme = createMuiTheme({
@@ -24,17 +26,19 @@ const theme = createMuiTheme({
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
-    this.scrollQuemSomos = React.createRef();
+    this.scrollHome = React.createRef();
     this.scrollProjetos = React.createRef();
     this.handler = this.handler.bind(this);
   }
 
   handler(id) {
-    if(id === "QUEM_SOMOS") {
-      this.scrollQuemSomos.current.scrollIntoView({behavior: 'smooth'});
+    if (id === "HOME") {
+      var Scroll = require("react-scroll");
+      var scroll = Scroll.animateScroll;
+      scroll.scrollToTop({ smooth: true, duration: "1500", delay: "500" });
     }
-    if(id === "PROJETOS") {
-      this.scrollProjetos.current.scrollIntoView({behavior: 'smooth'});
+    if (id === "PROJETOS") {
+      this.scrollProjetos.current.scrollIntoView();
     }
   }
 
@@ -44,8 +48,9 @@ class LandingPage extends React.Component {
         <ThemeProvider theme={theme}>
           {console.log(this.state)}
           <AppBar handler={this.handler} />
-          <QuemSomos ref={this.scrollQuemSomos} />
+          <Home ref={this.scrollHome} />
           <Projetos ref={this.scrollProjetos} />
+          <Contato />
         </ThemeProvider>
       </Grid>
     );

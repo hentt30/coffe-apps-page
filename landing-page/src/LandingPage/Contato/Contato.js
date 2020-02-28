@@ -8,21 +8,24 @@ import { withStyles } from "@material-ui/styles";
 const styles = theme => ({
   root: {
     display: "flex",
-    height: "100vh",
-    alignItems: "center"
+    height: "30vh",
+    alignItems: "center",
+    backgroundColor: "#CD5C5C"
   },
   title: {
-    fontSize: "56px",
+    fontSize: "26px",
     fontFamily: "lato",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "white"
   },
   text: {
-    fontSize: "26px",
-    fontFamily: "lato"
+    fontSize: "16px",
+    fontFamily: "lato",
+    color: "white"
   }
 });
 
-class QuemSomos extends React.Component {
+class Home extends React.Component {
   render() {
     const { classes } = this.props;
 
@@ -30,30 +33,27 @@ class QuemSomos extends React.Component {
       <Grid
         container
         component="main"
-        id="quemsomos"
+        id="contato"
         className={classes.root}
         xs={12}
       >
         <CssBaseline />
-
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography className={classes.title} align="center">
-            Coffee apps
+            Envie uma mensagem:
           </Typography>
+          <br />
           <Typography className={classes.text} align="center">
-            Antiga neyzinho apps
+            Whatsapp: (12) 991674968
           </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <img src={window.location.origin + "/app.svg"} />
         </Grid>
       </Grid>
     );
   }
 }
 
-QuemSomos.propTypes = {
+Home.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(QuemSomos);
+export default withStyles(styles)(Home);
