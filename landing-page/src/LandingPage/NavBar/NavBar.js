@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     fontFamily: "lato",
-    marginBottom: '64px',
+    marginBottom: "64px"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -68,21 +68,36 @@ export default function ButtonAppBar(props) {
       <AppBar position="fixed" color="secondary">
         <Toolbar>
           <Grid item xs={1}>
-            <LocalCafeIcon position="start" fontSize="large" />
+            <img
+              src={window.location.origin + "/coffee-bw.svg"}
+              height="40%"
+              width="40%"
+            />
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">Home</Button>
+            <Button color="inherit">
+              <b>Home</b>
+            </Button>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit" onClick={() => {
-              props.handler("QUEM_SOMOS")
-            }}>Sobre</Button>
+            <Button
+              color="inherit"
+              onClick={() => {
+                props.handler("QUEM_SOMOS");
+              }}
+            >
+              <b>Sobre</b>
+            </Button>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit" href="#projetos">Projetos</Button>
+            <Button color="inherit" href="#projetos">
+              <b>Projetos</b>
+            </Button>
           </Grid>
           <Grid item xs={1}>
-            <Button color="inherit">Contato</Button>
+            <Button color="inherit">
+              <b>Contato</b>
+            </Button>
           </Grid>
           <Grid item xs={4}></Grid>
           <Grid item xs={3}>

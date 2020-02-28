@@ -1,39 +1,23 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/styles';
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/styles";
 
 const styles = theme => ({
   root: {
-    height: "100vh"
-  },
-  image: {
-    backgroundImage:
-      "url(https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?cs=srgb&dl=blur-business-coffee-commerce-273222.jpg&fm=jpg)",
-    backgroundRepeat: "no-repeat",
-    backgroundColor:
-      theme.palette.type === "dark"
-        ? theme.palette.grey[900]
-        : theme.palette.grey[50],
-    backgroundSize: "cover",
-    backgroundPosition: "center"
-  },
-  paper: {
-    margin: theme.spacing(10, 8),
     display: "flex",
-    flexDirection: "column",
+    height: "100vh",
     alignItems: "center"
   },
   title: {
-    fontSize: "46px",
+    fontSize: "56px",
     fontFamily: "lato",
     fontWeight: "bold"
   },
   text: {
+    fontSize: "26px",
     fontFamily: "lato"
   }
 });
@@ -43,41 +27,33 @@ class QuemSomos extends React.Component {
     const { classes } = this.props;
 
     return (
-        <main id="quemsomos">
-          <Grid container component="main" className={classes.root}>
-            <CssBaseline/>
-            <Grid item xs={false} sm={4} md={7} className={classes.image}/>
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-              <div className={classes.paper}>
-                <Typography className={classes.title}>Coffee Apps</Typography>
-                <br/>
-                <Typography>
-                  {"  "}A <b>coffee apps</b> foi uma empresa surgiu no alojamento ITA.
-                  Um instituto de excelência nacional e internacional. Grandes
-                  personalidades como Bill Gates, Stephen Hawking e Ellon Musk
-                  afirmaram publicamente que só contratam alunos do ITA.
-                </Typography>
-                <br/>
-                <Typography>
-                  {"  "} Agora voltando aos fatos históricos, Buda foi um dos
-                  primeiros alunos da instituição, após se formar ele ascendeu e se
-                  tornou um símbolo da história mundial. Dentre outras personalidades
-                  famosas que temos no ita, podemos citar:{" "}
-                  <b>
-                    Martin Lutherking, Dalai Lama, Cleiton Rasta(O melhor DJ do
-                    brasil), Bruce Wayne, Tiringa, Charlles e Lopim.
-                  </b>
-                </Typography>
-              </div>
-            </Grid>
-          </Grid>
-        </main>
+      <Grid
+        container
+        component="main"
+        id="quemsomos"
+        className={classes.root}
+        xs={12}
+      >
+        <CssBaseline />
+
+        <Grid item xs={6}>
+          <Typography className={classes.title} align="center">
+            Coffee apps
+          </Typography>
+          <Typography className={classes.text} align="center">
+            Antiga neyzinho apps
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <img src={window.location.origin + "/app.svg"} />
+        </Grid>
+      </Grid>
     );
   }
 }
 
 QuemSomos.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(QuemSomos);
