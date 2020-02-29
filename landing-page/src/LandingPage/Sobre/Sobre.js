@@ -52,30 +52,26 @@ class Home extends React.Component {
         </Grid>
 
         <Grid item className={classes.description}>
-          <Typography className={classes.text} align="center">
-            A coffee apps é uma empresa que surgiu no alojamento do ITA.
+          <Typography className={classes.text}>
+            A Coffe APPs é uma Software House que surgiu no alojamento
           </Typography>
-          <Typography className={classes.text} align="center">
-            Um instituto de excelência nacional e internacional.
+          <Typography className={classes.text}>
+            o Instituto Tecnológico de Aeronáutica (ITA). Ela é formada por
           </Typography>
-          <Typography className={classes.text} align="center">
-            GrandesPersonalidades como Bill Gates, Elon Musk e Jeff Bezos
+          <Typography className={classes.text}>
+            dois programadores apaixonados por inovar. Nosso principal
           </Typography>
-          <Typography className={classes.text} align="center">
-            afirmaram <b>publicamente</b> que só contratavam alunos do ITA.{" "}
+          <Typography className={classes.text}>
+            foco é proporcionar soluções tecnológicas para pessoas físicas
           </Typography>
+
+          <Typography className={classes.text}>jurídicas.</Typography>
           <br />
-          <Typography className={classes.text} align="center">
-            Aproveitando para relacionar com os fatos históricos, Buda foi um
+          <Typography className={classes.text}>
+            Os serviços oferecidos abrangem a confecção de apps, sites,
           </Typography>
-          <Typography className={classes.text} align="center">
-            dos primeiros alunos da instituição, após se formar na T(-33) ele
-          </Typography>
-          <Typography className={classes.text} align="center">
-            ascendeu e várias pessoas começaram a segui-lo. Dizem os boatos
-          </Typography>
-          <Typography className={classes.text} align="center">
-            que seu nome de bixo é Borat. Para finalizar, podemos.
+          <Typography className={classes.text}>
+            projetos de data science e automatização de processos
           </Typography>
         </Grid>
       </Grid>
