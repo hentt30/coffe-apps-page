@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 80vw;
 `;
 
 const StyledGrid = styled(Grid)`

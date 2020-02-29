@@ -8,12 +8,29 @@ import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     fontFamily: "lato",
-    marginBottom: "64px"
+  },
+  appBar: {
+    display: "flex",
+    justifyContent: "center",
+    height: "70px"
+  },
+  topBar: {
+    display: "flex",
+    justifyContent: "space-between",
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: "center",
+    },
+    width: "1366px",
+  },
+  buttons: {
+    display: "flex",
+    justifyContent: "flex-end"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -21,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1
   },
-  search: {
+  /*search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -57,7 +74,7 @@ const useStyles = makeStyles(theme => ({
         width: 200
       }
     }
-  }
+  }*/
 }));
 
 export default function ButtonAppBar(props) {
@@ -65,56 +82,59 @@ export default function ButtonAppBar(props) {
 
   return (
     <div className={classes.root}>
-      {console.log(props)}
-      <AppBar position="fixed" color="secondary">
-        <Toolbar>
-          <Grid item xs={1}>
-            <img
-              src={window.location.origin + "/coffee-bw.svg"}
-              height="40%"
-              width="40%"
-            />
+      <AppBar className={classes.appBar} position="fixed" color="secondary">
+        <div style={{display: "flex", justifyContent: "center"}}>
+        <Toolbar className={classes.topBar}>
+          <Hidden xsDown>
+            <Grid item style={{display: "flex", alignItems: "center"}}>
+              <img
+                src={window.location.origin + "/workplace.svg"}
+                height="64px"
+              />
+            </Grid>
+          </Hidden>
+          <Grid className={classes.buttons} item>
+            <Grid item>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button color="inherit" >Home</Button>
+              </Link>
+            </Grid>
+            <Grid item>
+              <Button color="inherit">Sobre</Button>
+            </Grid>
+            <Grid item>
+              <Link
+                activeClass="active"
+                to="projetos"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button color="inherit" >Projetos</Button>
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link
+                activeClass="active"
+                to="contato"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button color="inherit">Contato</Button>
+              </Link>
+            </Grid>
           </Grid>
-          <Grid item xs={1}>
-            <Link
-              activeClass="active"
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <b>Home</b>
-            </Link>
-          </Grid>
-          <Grid item xs={1}>
-            <b>Sobre</b>
-          </Grid>
-          <Grid item xs={1}>
-            <Link
-              activeClass="active"
-              to="projetos"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <b>Projetos</b>
-            </Link>
-          </Grid>
-          <Grid item xs={1}>
-            <Link
-              activeClass="active"
-              to="contato"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <b>Contato</b>
-            </Link>
-          </Grid>
-          <Grid item xs={4}></Grid>
+{/*
           <Grid item xs={3}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -130,7 +150,9 @@ export default function ButtonAppBar(props) {
               />
             </div>
           </Grid>
+*/}
         </Toolbar>
+        </div>
       </AppBar>
     </div>
   );

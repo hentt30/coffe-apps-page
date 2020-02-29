@@ -44,9 +44,8 @@ class LandingPage extends React.Component {
 
   render() {
     return (
-      <Grid container>
+      <Grid container justify="center">
         <ThemeProvider theme={theme}>
-          {console.log(this.state)}
           <AppBar handler={this.handler} />
           <Home ref={this.scrollHome} />
           <Projetos ref={this.scrollProjetos} />

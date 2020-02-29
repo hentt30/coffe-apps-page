@@ -9,7 +9,8 @@ const styles = theme => ({
   root: {
     display: "flex",
     height: "100vh",
-    alignItems: "center"
+    alignItems: "center",
+    paddingTop: "64px"
   },
   title: {
     fontSize: "56px",
@@ -19,6 +20,9 @@ const styles = theme => ({
   text: {
     fontSize: "26px",
     fontFamily: "lato"
+  },
+  img: {
+    width: "100%"
   }
 });
 
@@ -31,21 +35,22 @@ class Home extends React.Component {
         container
         component="main"
         id="home"
+        justify="space-evenly"
         className={classes.root}
         xs={12}
       >
         <CssBaseline />
 
-        <Grid item xs={6}>
+        <Grid item >
           <Typography className={classes.title} align="center">
-            Coffee apps
+            Coffee APPs
           </Typography>
           <Typography className={classes.text} align="center">
-            Antiga neyzinho apps
+            Tirando ideias do papel!
           </Typography>
         </Grid>
-        <Grid item xs={6}>
-          <img src={window.location.origin + "/app.svg"} />
+        <Grid item>
+          <img className={classes.img} src={window.location.origin + "/app.svg"} />
         </Grid>
       </Grid>
     );
