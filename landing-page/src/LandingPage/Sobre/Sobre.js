@@ -44,50 +44,57 @@ class Home extends React.Component {
     const { classes } = this.props;
 
     return (
-        <div className={classes.root} id="sobre">
-      <Grid
-        container
-        component="main"
-        justify="space-evenly"
-        xs={12}
-      >
-        <CssBaseline />
+      <div className={classes.root} id="sobre">
+        <Grid container component="main" justify="space-evenly" xs={12}>
+          <CssBaseline />
 
-        <Grid item>
-          <img
-            className={classes.img}
-            src={window.location.origin + "/workteam.svg"}
-          />
-        </Grid>
+          <Grid item>
+            <img
+              className={classes.img}
+              src={window.location.origin + "/workteam.svg"}
+            />
+          </Grid>
 
-        <Grid item className={classes.description}>
-          <Typography className={classes.title} align="center">
-            Sobre Nós
-          </Typography>
-          <Typography className={classes.text} >
-            A Coffee APPs é uma Software House que surgiu no alojamento
-          </Typography>
-          <Typography className={classes.text}>
-            do Instituto Tecnológico de Aeronáutica (ITA)
-          </Typography>
-          <br />
-          <Typography className={classes.text}>
-            Ela é formada por dois programadores apaixonados por inovar.
-          </Typography>
-          <Typography className={classes.text}>
-            Nosso principal foco é proporcionar soluções tecnológicas para
-          </Typography>
-          <Typography className={classes.text}>pessoas físicas jurídicas</Typography>
-          {/*<br />
+          <Grid item className={classes.description}>
+            <Typography className={classes.title} align="center">
+              Sobre Nós
+            </Typography>
+            <Typography className={classes.text}>
+              A Coffee APPs é uma Software House que surgiu no alojamento
+            </Typography>
+            <Typography className={classes.text}>
+              do Instituto Tecnológico de Aeronáutica (ITA)
+            </Typography>
+            <br />
+            <Typography className={classes.text}>
+              Ela é formada por dois programadores apaixonados por inovar.
+            </Typography>
+            <Typography className={classes.text}>
+              Apaixonados fortemente por aplicar novas tecnologias no cotidiano,
+            </Typography>
+            <Typography className={classes.text}>
+              uma base forte e uma paixão foram desenvolvendo-se continuamente.
+            </Typography>
+            <Typography className={classes.text}>
+              Tendo isso em conta, nosso principal foco é utilizar esse
+              conhecimento
+            </Typography>
+            <Typography className={classes.text}>
+              com o intuito de proporcionar soluções tecnológicas para
+            </Typography>
+            <Typography className={classes.text}>
+              pessoas físicas jurídicas
+            </Typography>
+            {/*<br />
           <Typography className={classes.text}>
             Os serviços oferecidos abrangem a confecção de apps, sites,
           </Typography>
           <Typography className={classes.text}>
             projetos de data science e automatização de processos
           </Typography>*/}
+          </Grid>
         </Grid>
-      </Grid>
-        </div>
+      </div>
     );
   }
 }
