@@ -7,6 +7,7 @@ import Home from "./Home/Home.js";
 import AppBar from "./NavBar/NavBar.js";
 import Projetos from "./Projetos/Projetos";
 import Contato from "./Contato/Contato";
+import Sobre from "./Sobre/Sobre";
 import styled from "styled-components";
 import * as Scroll from "react-scroll"; // eslint-disable-next-line
 import Toolbar from "@material-ui/core/Toolbar";
@@ -48,6 +49,7 @@ class LandingPage extends React.Component {
         <ThemeProvider theme={theme}>
           <AppBar handler={this.handler} />
           <Home ref={this.scrollHome} />
+          <Sobre />
           <Projetos ref={this.scrollProjetos} />
           <Contato />
         </ThemeProvider>

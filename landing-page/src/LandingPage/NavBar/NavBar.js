@@ -8,12 +8,12 @@ import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import { Link, animateScroll as scroll } from "react-scroll";
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    fontFamily: "lato",
+    fontFamily: "lato"
   },
   appBar: {
     display: "flex",
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
   topBar: {
     display: "flex",
     justifyContent: "space-between",
-    [theme.breakpoints.down('xs')]: {
-      justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center"
     },
-    width: "1366px",
+    width: "1366px"
   },
   buttons: {
     display: "flex",
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1
-  },
+  }
   /*search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -83,58 +83,67 @@ export default function ButtonAppBar(props) {
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed" color="secondary">
-        <div style={{display: "flex", justifyContent: "center"}}>
-        <Toolbar className={classes.topBar}>
-          <Hidden xsDown>
-            <Grid item style={{display: "flex", alignItems: "center"}}>
-              <img
-                src={window.location.origin + "/workplace.svg"}
-                height="64px"
-              />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Toolbar className={classes.topBar}>
+            <Hidden xsDown>
+              <Grid item style={{ display: "flex", alignItems: "center" }}>
+                <img
+                  src={window.location.origin + "/workplace.svg"}
+                  height="64px"
+                />
+              </Grid>
+            </Hidden>
+            <Grid className={classes.buttons} item>
+              <Grid item>
+                <Link
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button color="inherit">Home</Button>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link
+                  activeClass="active"
+                  to="sobre"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button color="inherit">Sobre</Button>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link
+                  activeClass="active"
+                  to="projetos"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button color="inherit">Projetos</Button>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link
+                  activeClass="active"
+                  to="contato"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <Button color="inherit">Contato</Button>
+                </Link>
+              </Grid>
             </Grid>
-          </Hidden>
-          <Grid className={classes.buttons} item>
-            <Grid item>
-              <Link
-                activeClass="active"
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button color="inherit" >Home</Button>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Button color="inherit">Sobre</Button>
-            </Grid>
-            <Grid item>
-              <Link
-                activeClass="active"
-                to="projetos"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button color="inherit" >Projetos</Button>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link
-                activeClass="active"
-                to="contato"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <Button color="inherit">Contato</Button>
-              </Link>
-            </Grid>
-          </Grid>
-{/*
+            {/*
           <Grid item xs={3}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -151,7 +160,7 @@ export default function ButtonAppBar(props) {
             </div>
           </Grid>
 */}
-        </Toolbar>
+          </Toolbar>
         </div>
       </AppBar>
     </div>
