@@ -83,7 +83,7 @@ class Home extends React.Component {
               com o intuito de proporcionar soluções tecnológicas para
             </Typography>
             <Typography className={classes.text}>
-              pessoas físicas jurídicas
+              pessoas físicas ou jurídicas
             </Typography>
             {/*<br />
           <Typography className={classes.text}>
