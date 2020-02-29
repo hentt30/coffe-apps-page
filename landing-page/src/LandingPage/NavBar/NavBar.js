@@ -6,9 +6,11 @@ import Button from "@material-ui/core/Button";
 import LocalCafeIcon from "@material-ui/icons/LocalCafe";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
+import MenuIcon from "@material-ui/icons/Menu"
 import InputBase from "@material-ui/core/InputBase";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Hidden from "@material-ui/core/Hidden";
+import {Menu} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,9 +25,6 @@ const useStyles = makeStyles(theme => ({
   topBar: {
     display: "flex",
     justifyContent: "space-between",
-    [theme.breakpoints.down("xs")]: {
-      justifyContent: "center"
-    },
     width: "1366px"
   },
   buttons: {
@@ -80,86 +79,134 @@ const useStyles = makeStyles(theme => ({
 export default function ButtonAppBar(props) {
   const classes = useStyles();
 
-  return (
+  const homeButton = (
+      <Grid item>
+        <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+          <Button color="inherit">Home</Button>
+        </Link>
+      </Grid>
+  );
+
+  const sobreButton = (
+      <Grid item>
+        <Link
+            activeClass="active"
+            to="sobre"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+          <Button color="inherit">Sobre</Button>
+        </Link>
+      </Grid>
+  );
+
+  const servicosButton = (
+      <Grid item>
+        <Link
+            activeClass="active"
+            to="servicos"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+          <Button color="inherit">Serviços</Button>
+        </Link>
+      </Grid>
+  );
+
+  const projetosButton = (
+      <Grid item>
+        <Link
+            activeClass="active"
+            to="projetos"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+          <Button color="inherit">Projetos</Button>
+        </Link>
+      </Grid>
+  );
+
+  const contatoButton = (
+      <Grid item>
+        <Link
+            activeClass="active"
+            to="contato"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+          <Button color="inherit">Contato</Button>
+        </Link>
+      </Grid>
+  );
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = event => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed" color="secondary">
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Toolbar className={classes.topBar}>
+            <Grid item style={{ display: "flex", alignItems: "center" }}>
+              <img
+                src={window.location.origin + "/workplace.svg"}
+                height="64px"
+              />
+            </Grid>
             <Hidden xsDown>
-              <Grid item style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={window.location.origin + "/workplace.svg"}
-                  height="64px"
-                />
+              <Grid className={classes.buttons} item>
+                {homeButton}
+                {sobreButton}
+                {servicosButton}
+                {projetosButton}
+                {contatoButton}
               </Grid>
             </Hidden>
-            <Grid className={classes.buttons} item>
-              <Grid item>
-                <Link
-                  activeClass="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  <Button color="inherit">Home</Button>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link
-                  activeClass="active"
-                  to="sobre"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  <Button color="inherit">Sobre</Button>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link
-                  activeClass="active"
-                  to="projetos"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  <Button color="inherit">Projetos</Button>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link
-                  activeClass="active"
-                  to="contato"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  <Button color="inherit">Contato</Button>
-                </Link>
-              </Grid>
-            </Grid>
-            {/*
-          <Grid item xs={3}>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput
-                }}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </div>
-          </Grid>
-*/}
+              <Hidden smUp>
+                  <Button
+                      aria-controls="customized-menu"
+                      aria-haspopup="true"
+                      variant="contained"
+                      color="secondary"
+                      onClick={handleClick}
+                  >
+                      <MenuIcon/>
+                  </Button>
+                  <Menu
+                      id="customized-menu"
+                      anchorEl={anchorEl}
+                      keepMounted
+                      open={Boolean(anchorEl)}
+                      onClose={handleClose} >
+                      {homeButton}
+                      {sobreButton}
+                      {servicosButton}
+                      {projetosButton}
+                      {contatoButton}
+                  </Menu>
+              </Hidden>
           </Toolbar>
         </div>
       </AppBar>

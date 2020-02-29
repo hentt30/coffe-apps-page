@@ -3,87 +3,189 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
 import MediaCard from "./Card/Card";
+import { withStyles } from "@material-ui/styles";
+import PropTypes from "prop-types";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  min-height: 100vh;
-  max-width: 80vw;
-`;
+const styles = theme => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    minHeight: "130vh",
+    maxWidth: "80vw",
+    paddingBottom: "16px"
+  },
+  title: {
+    fontSize: "56px",
+    fontFamily: "lato",
+    fontWeight: "bold",
+    paddingTop: "16px",
+    paddingBottom: "16px"
+  },
+  text: {
+    fontSize: "20px",
+    fontFamily: "lato",
+    display: "flex",
+    justifyContent: "center"
+  },
+  img: {
+    width: "100%"
+  },
+  card: {
+    width: "400px",
+    padding: "10px 0px 10px"
+  },
+  description: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
+  }
+});
 
-const StyledGrid = styled(Grid)`
-  max-width: 400px;
-  padding: 10px 0px 10px;
-`;
 
-export default function Projetos() {
-  const DataCard = [
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    },
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    },
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    },
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    },
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    },
-    {
-      img: "",
-      title: "Lorem Ipsum",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida sem justo, eget sodales metus dignissim vel. Vestibulum porttitor magna non odio vulputate interdum. Suspendisse egestas eu purus nec ultricies. Vivamus in aliquam quam. Donec consequat tellus convallis, scelerisque nisi ut, condimentum mi. Pellentesque interdum, orci eu gravida consequat, odio erat vestibulum orci, congue consectetur odio urna id enim. Aenean in efficitur massa. Duis dignissim a ipsum sed dapibus. Phasellus sem diam, pulvinar at bibendum in, rhoncus lacinia dui. Aliquam ac lobortis quam. Quisque in nisi elit. Proin at tortor est."
-    }
-  ];
-  // eslint-disable-next-line
-  const lin = 0;
+class Projetos extends React.Component {
+  render() {
+    const { classes } = this.props;
 
-  return (
-    <Wrapper id="projetos">
-      <Grid container justify="center" alignItems="center">
-        <Typography variant="h2">Projetos</Typography>
-      </Grid>
-      <Grid container display="flex" alignItems="center" justify="space-evenly">
-        {DataCard.map(data => (
-          <StyledGrid item>
-            <MediaCard {...data} />
-          </StyledGrid>
-        ))}
-      </Grid>
-    </Wrapper>
-  );
+    const DataCard = [
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Aplicativo",
+        subtitle:
+            "Chatbot para Android, IPhone e Web.",
+        description:
+            "Chatbot com sistema de login, cadastro e comunicação com uma API feita em Python que executava toda a lógica para gerar uma resposta ao usuário. Este aplicativo foi desenvolvido para Android, IPhone e Web.",
+      },
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Aplicativo",
+        subtitle:
+            "Aplicação Web de vídeos no modelo do Netflix.",
+        description:
+            "Aplicação Web com sistema de login, cadastro, exibição de vídeos e upload de vídeos. Nesta aplicação o dono da página realizava upload dos vídeos para os assinantes da plataforma.",
+      },
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Ciência de Dados",
+        subtitle:
+            "Utilização de Machine Learning para .",
+        description:
+            "Aplicação Web de vídeos no modelo do Netflix."
+      },
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Inteligência Artificial",
+        subtitle:
+            "Aplicação Web de vídeos no modelo do Netflix.",
+        description:
+            "Aplicação Web de vídeos no modelo do Netflix."
+      },
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Inteligência Artificial",
+        subtitle:
+            "Aplicação Web de vídeos no modelo do Netflix.",
+        description:
+            "Aplicação Web de vídeos no modelo do Netflix."
+      },
+      {
+        imgs: [
+          {
+            label: 'Tela de Login',
+            imgPath:
+                '/workplace.svg',
+          },
+          {
+            label: 'Tela de Chat',
+            imgPath:
+                '/workplace.svg',
+          }
+        ],
+        title: "Automatização de Processos",
+        subtitle:
+            "Aplicação Web de vídeos no modelo do Netflix.",
+        description:
+            "Aplicação Web de vídeos no modelo do Netflix."
+      }
+    ];
+
+    return (
+        <div style={{background: "#3df0b1", width: "100%", display: "flex", justifyContent: "center"}}>
+          <div className={classes.root} id="projetos">
+            <Grid container justify="center" alignItems="center">
+              <Typography className={classes.title}>Projetos</Typography>
+            </Grid>
+            <Grid container display="flex" alignItems="center" justify="space-evenly">
+              {DataCard.map(data => (
+                  <Grid className={classes.card} item>
+                    <MediaCard {...data} />
+                  </Grid>
+              ))}
+            </Grid>
+          </div>
+        </div>
+    );
+  }
 }
+
+Projetos.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Projetos);

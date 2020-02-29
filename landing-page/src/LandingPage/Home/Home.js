@@ -15,7 +15,7 @@ const styles = theme => ({
   title: {
     fontSize: "56px",
     fontFamily: "lato",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   text: {
     fontSize: "26px",

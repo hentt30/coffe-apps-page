@@ -11,13 +11,16 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
+import ImageStepper from './ImageStepper';
 import styled from "styled-components";
+import Fab from "@material-ui/core/Fab";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const StyledCard = styled(Card)`
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 450px;
+  height: 355px;
 `;
 
 export default class MediaCard extends React.Component {
@@ -42,11 +45,8 @@ export default class MediaCard extends React.Component {
   render() {
     return (
       <StyledCard>
+          <ImageStepper tutorialSteps={this.props.imgs} />
         <CardActionArea onClick={this.handleClickOpen}>
-          <StyledCardMedia
-            image={this.props.img}
-            title={this.props.title}
-          />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {this.props.title}
@@ -54,6 +54,9 @@ export default class MediaCard extends React.Component {
             <Typography variant="body2" color="textSecondary" component="p">
               {this.props.subtitle}
             </Typography>
+            <Button size="small" color="inherit" style={{position: "absolute", right: 8, bottom: 8}}>
+              <ExpandMoreIcon />
+            </Button>
           </CardContent>
         </CardActionArea>
         <Dialog
@@ -72,10 +75,7 @@ export default class MediaCard extends React.Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
-              Disagree
-            </Button>
-            <Button onClick={this.handleClose} color="primary" autoFocus>
-              Agree
+              Fechar
             </Button>
           </DialogActions>
         </Dialog>

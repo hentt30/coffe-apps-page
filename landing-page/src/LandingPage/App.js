@@ -11,6 +11,7 @@ import Sobre from "./Sobre/Sobre";
 import styled from "styled-components";
 import * as Scroll from "react-scroll"; // eslint-disable-next-line
 import Toolbar from "@material-ui/core/Toolbar";
+import Servicos from "./Servicos/Servicos";
 
 const theme = createMuiTheme({
   typography: {
@@ -27,7 +28,6 @@ const theme = createMuiTheme({
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
-    this.scrollHome = React.createRef();
     this.scrollProjetos = React.createRef();
     this.handler = this.handler.bind(this);
   }
@@ -38,9 +38,6 @@ class LandingPage extends React.Component {
       var scroll = Scroll.animateScroll;
       scroll.scrollToTop({ smooth: true, duration: "1500", delay: "500" });
     }
-    if (id === "PROJETOS") {
-      this.scrollProjetos.current.scrollIntoView();
-    }
   }
 
   render() {
@@ -48,9 +45,10 @@ class LandingPage extends React.Component {
       <Grid container justify="center">
         <ThemeProvider theme={theme}>
           <AppBar handler={this.handler} />
-          <Home ref={this.scrollHome} />
+          <Home />
           <Sobre />
-          <Projetos ref={this.scrollProjetos} />
+          <Servicos />
+          <Projetos />
           <Contato />
         </ThemeProvider>
       </Grid>

@@ -8,25 +8,35 @@ import { withStyles } from "@material-ui/styles";
 const styles = theme => ({
   root: {
     display: "flex",
+    height: "100vh",
     minHeight: "100vh",
     alignItems: "center",
-    paddingTop: "64px",
-    backgroundColor: "#9BA8AC"
+    width: "100%",
+    background: "#3df0b1"
   },
   title: {
     fontSize: "56px",
     fontFamily: "lato",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "#F5F5F5"
   },
   text: {
-    fontSize: "26px",
+    fontSize: "20px",
     fontFamily: "lato",
-    color: "white"
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    color: "#1D2A30"
   },
   img: {
+    maxWidth: "683px",
     width: "100%"
   },
-  description: {}
+  description: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
+  }
 });
 
 class Home extends React.Component {
@@ -34,12 +44,11 @@ class Home extends React.Component {
     const { classes } = this.props;
 
     return (
+        <div className={classes.root} id="sobre">
       <Grid
         container
         component="main"
-        id="sobre"
         justify="space-evenly"
-        className={classes.root}
         xs={12}
       >
         <CssBaseline />
@@ -52,29 +61,33 @@ class Home extends React.Component {
         </Grid>
 
         <Grid item className={classes.description}>
-          <Typography className={classes.text}>
-            A Coffe APPs é uma Software House que surgiu no alojamento
+          <Typography className={classes.title} align="center">
+            Sobre Nós
+          </Typography>
+          <Typography className={classes.text} >
+            A Coffee APPs é uma Software House que surgiu no alojamento
           </Typography>
           <Typography className={classes.text}>
-            o Instituto Tecnológico de Aeronáutica (ITA). Ela é formada por
+            do Instituto Tecnológico de Aeronáutica (ITA)
           </Typography>
-          <Typography className={classes.text}>
-            dois programadores apaixonados por inovar. Nosso principal
-          </Typography>
-          <Typography className={classes.text}>
-            foco é proporcionar soluções tecnológicas para pessoas físicas
-          </Typography>
-
-          <Typography className={classes.text}>jurídicas.</Typography>
           <br />
+          <Typography className={classes.text}>
+            Ela é formada por dois programadores apaixonados por inovar.
+          </Typography>
+          <Typography className={classes.text}>
+            Nosso principal foco é proporcionar soluções tecnológicas para
+          </Typography>
+          <Typography className={classes.text}>pessoas físicas jurídicas</Typography>
+          {/*<br />
           <Typography className={classes.text}>
             Os serviços oferecidos abrangem a confecção de apps, sites,
           </Typography>
           <Typography className={classes.text}>
             projetos de data science e automatização de processos
-          </Typography>
+          </Typography>*/}
         </Grid>
       </Grid>
+        </div>
     );
   }
 }
