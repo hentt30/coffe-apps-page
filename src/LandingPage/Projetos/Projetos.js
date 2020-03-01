@@ -122,7 +122,7 @@ class Projetos extends React.Component {
             imgPath: "/vision.svg"
           }
         ],
-        title: "Visão Computacionais",
+        title: "Visão Computacional",
         subtitle: "Obter informação de imagens ou vídeos.",
         description:
           ["Algoritmo para tirar informações de CNHs.", "Reconhecimento de objetos ou pessoas do mundo real."]
