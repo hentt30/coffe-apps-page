@@ -12,6 +12,7 @@ import styled from "styled-components";
 import * as Scroll from "react-scroll"; // eslint-disable-next-line
 import Toolbar from "@material-ui/core/Toolbar";
 import Servicos from "./Servicos/Servicos";
+import Footer from "./Footer/Footer";
 
 const theme = createMuiTheme({
   typography: {
@@ -50,6 +51,7 @@ class LandingPage extends React.Component {
           <Servicos />
           <Projetos />
           <Contato />
+          <Footer />
         </ThemeProvider>
       </Grid>
     );

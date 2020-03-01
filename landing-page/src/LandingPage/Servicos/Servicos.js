@@ -10,7 +10,8 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    margin: 32,
   },
   title: {
     fontSize: "56px",
@@ -29,8 +30,8 @@ const styles = theme => ({
     width: "100%"
   },
   card: {
-    paddingBottom: "8px",
-    paddingTop: "8px",
+    marginTop: 8,
+    marginBottom: 8,
     height: 196,
     width: 256
   },
@@ -84,6 +85,7 @@ class Servicos extends React.Component {
               display="flex"
               alignItems="center"
               justify="space-evenly"
+              style={{marginBottom: 8}}
             >
               <Grid className={classes.card} item>
                 <ServicosCard {...DataCard[1]} />

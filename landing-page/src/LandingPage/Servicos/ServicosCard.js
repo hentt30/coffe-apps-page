@@ -9,7 +9,8 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    height: "100%"
   },
   content: {
     display: "flex",
@@ -19,7 +20,6 @@ const useStyles = makeStyles({
   },
   img: {
     height: "64px",
-    paddingBottom: "8px"
   },
   title: {
     fontSize: 18

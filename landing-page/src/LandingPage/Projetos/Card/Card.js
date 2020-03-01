@@ -15,6 +15,7 @@ import ImageStepper from './ImageStepper';
 import styled from "styled-components";
 import Fab from "@material-ui/core/Fab";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Grid from "@material-ui/core/Grid";
 
 const StyledCard = styled(Card)`
 `;
@@ -70,7 +71,12 @@ export default class MediaCard extends React.Component {
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              {this.props.description}
+              {this.props.description.map(data => (
+                  <Typography>
+                    {data}
+                  </Typography>
+              ))}
+
             </DialogContentText>
           </DialogContent>
           <DialogActions>

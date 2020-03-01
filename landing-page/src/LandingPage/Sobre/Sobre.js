@@ -12,13 +12,14 @@ const styles = theme => ({
     flexDirection: "column",
     justifyContent: "space-evenly",
     minHeight: "100vh",
-    width: "100vw"
+    width: "100vw",
+    margin: 32
   },
   title: {
     fontSize: "56px",
     fontFamily: "lato",
     fontWeight: "bold",
-    color: "#1D2A30"
+    color: "#F5F5F5"
   },
   text: {
     fontSize: "20px",
@@ -35,8 +36,8 @@ const styles = theme => ({
   card: {
     paddingBottom: "8px",
     paddingTop: "8px",
-
-    width: 300
+    height: 550,
+    width: 400
   },
   description: {
     display: "flex",
@@ -66,34 +67,31 @@ class Sobre extends React.Component {
          processamento de linguagem natural."
       },
       {
-        img: "/stitch.jpg",
-        title: "Henrique Fernandes",
+        img: "/mug.svg",
+        title: "Coffee APPs",
         subtitle:
-          "Olá, me chamo Henrique e sou engenheiro \
-        da computação no ITA. Sempre tive paixão por inovar\
-        e experimentar novas tecnologias. Iniciei minha carreira\
-        acadêmica adentrando em um grupo de pesquisa em robótica,\
-        no qual participei de várias competições de cunho nacional\
-        e internacional, tal como a Robocup. Após isso, comecei a\
-        desenvolver projetos pessoais e adentrar no mundo profissional,\
-        no qual acabei adentrando através da startup Quero Educação,\
-        na qual tive experiência com Data Science, principalmente com\
-         processamento de linguagem natural."
+          "A Coffee APPs é uma Software House que surgiu no alojamento\
+          do Instituto Tecnológico de Aeronáutica (ITA).\
+          Ela é formada por dois programadores apaixonados por inovar.\
+          Assim, nós, entusiasmados por aplicar novas tecnologias no cotidiano,\
+          construímos uma base forte e uma grande bagagem de projetos.\
+          Desse modo, nosso principal foco é utilizar esse conhecimento\
+          em prol de proporcionar soluções tecnológicas para\
+          pessoas físicas e jurídicas."
       },
       {
-        img: "/stitch.jpg",
-        title: "Henrique Fernandes",
+        img: "/rubs.jpg",
+        title: "Rubens Aguiar",
         subtitle:
-          "Olá, me chamo Henrique e sou engenheiro \
-        da computação no ITA. Sempre tive paixão por inovar\
-        e experimentar novas tecnologias. Iniciei minha carreira\
-        acadêmica adentrando em um grupo de pesquisa em robótica,\
-        no qual participei de várias competições de cunho nacional\
-        e internacional, tal como a Robocup. Após isso, comecei a\
-        desenvolver projetos pessoais e adentrar no mundo profissional,\
-        no qual acabei adentrando através da startup Quero Educação,\
-        na qual tive experiência com Data Science, principalmente com\
-         processamento de linguagem natural."
+          "Olá, sou o Rubens e estudo engenharia no ITA! Aqui no ITA, participei de um conceituado grupo\
+          de robótica que possui premiações mundiais: onde\
+          desenvolvi pesquisas em Inteligência Artifical. Não somente, estagiei\
+          como Software Engineer na QuintoAndar, uma grande startup\
+          brasileira e como Data Scientist na Up.p uma fintech pioneira\
+          no empréstimo entre pessoas. Simultâneamente, trabalhei\
+          em outros projetos como: criar uma plataforma\
+          com vídeos sobre educação empreendedora e criar uma assistente virtual\
+          para ajudar pequenos negócios. Atualmente, desenvolvo Apps e produtos com inteligência artificial."
       }
     ];
     return (
@@ -106,6 +104,10 @@ class Sobre extends React.Component {
         }}
       >
         <div className={classes.root} id="sobre">
+
+          <Typography className={classes.title} align="center">
+            Sobre Nós
+          </Typography>
           <Grid
             container
             display="flex"

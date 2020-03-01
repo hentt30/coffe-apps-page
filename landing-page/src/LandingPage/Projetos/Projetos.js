@@ -14,14 +14,16 @@ const styles = theme => ({
     justifyContent: "space-evenly",
     minHeight: "130vh",
     maxWidth: "80vw",
-    paddingBottom: "16px"
+    paddingBottom: "16px",
+    margin: 16
   },
   title: {
     fontSize: "56px",
     fontFamily: "lato",
     fontWeight: "bold",
     paddingTop: "16px",
-    paddingBottom: "16px"
+    paddingBottom: "16px",
+    color: "#F5F5F5"
   },
   text: {
     fontSize: "20px",
@@ -52,87 +54,90 @@ class Projetos extends React.Component {
         imgs: [
           {
             label: "Tela de Login",
-            imgPath: "/workplace.svg"
+            imgPath: "/chain.svg"
+          },
+          {
+            label: "Tela de Sign Up",
+            imgPath: "/chain2.svg"
           },
           {
             label: "Tela de Chat",
-            imgPath: "/workplace.svg"
+            imgPath: "/chain1.svg"
           }
         ],
         title: "Aplicativo",
         subtitle: "Chatbot para Android, IPhone e Web.",
         description:
-          "Chatbot com sistema de login, cadastro e comunicação com uma API feita em Python que executava toda a lógica para gerar uma resposta ao usuário. Este aplicativo foi desenvolvido para Android, IPhone e Web."
+          ["Chatbot com sistema de login, cadastro e comunicação com uma API feita em Python que executava toda a lógica para gerar uma resposta ao usuário. Este aplicativo foi desenvolvido para Android, IPhone e Web."]
       },
       {
         imgs: [
           {
-            label: "Tela de Login",
-            imgPath: "/workplace.svg"
+            label: "Home dos Vídeos",
+            imgPath: "/inova4.png"
           },
           {
-            label: "Tela de Chat",
-            imgPath: "/workplace.svg"
-          }
+            label: "Tela de Exibição",
+            imgPath: "/inova5.png"
+          },
+          {
+            label: "Vídeos Recomendados",
+            imgPath: "/inova6.png"
+          },
         ],
         title: "Aplicativo",
         subtitle: "Aplicação Web de vídeos no modelo do Netflix.",
         description:
-          "Aplicação Web com sistema de login, cadastro, exibição de vídeos e upload de vídeos. Nesta aplicação o dono da página realizava upload dos vídeos para os assinantes da plataforma."
+          ["Aplicação Web com sistema de login, cadastro, exibição de vídeos e upload de vídeos. Nesta aplicação o dono da página realizava upload dos vídeos para os assinantes da plataforma."]
       },
       {
         imgs: [
           {
             label: "",
-            imgPath: "/computer.svg"
+            imgPath: "/manage.svg"
           }
         ],
         title: "Ciência de Dados",
         subtitle: "Machine learning para resolver desafios.",
         description:
-          "Criação de uma aplicação para retirar informações de CNH, construção de Knowledge graphs para \
-        a automatização de insights e aplicação para correção de redações automaticamente."
+            ["Pre-processamentos de dados.", "Modelagem de problemas que envolvam análise de dados.", "Criação de gráficos interativos.",
+              "Geração de conclusões e insights a partir dos dados."]
       },
       {
         imgs: [
           {
             label: "",
-            imgPath: "/robot.svg"
+            imgPath: "/audio-book.svg"
           }
         ],
-        title: "Robótica",
-        subtitle: "",
+        title: "Processamento de Linguagem",
+        subtitle: "Uso de IA para entender e compor informações.",
         description:
-          "Participação em um grupo de pesquisa em robótica relacionado com futebol \
-         robótico simulado 2D. Nessa experiência desenvolveu-se uma forte intuição de conceitos  \
-         relacionados a   inteligência artificial e otimizações. Além  disso, obteve-se experiência \
-          com projetos grandes em C++ e com a criação de scripts para automatização de tarefas."
+          ["Reconhecimento de informações e intenções no texto.", "Filtragem de textos.", "Geração de textos e relatórios a partir de informações.", "Reconhecimento e transcrição de voz."]
       },
       {
         imgs: [
           {
             label: "",
-            imgPath: "/brain.svg"
+            imgPath: "/vision.svg"
           }
         ],
-        title: "Inteligência Artificial",
-        subtitle: "Série de projetos desenvolvidos ",
+        title: "Visão Computacionais",
+        subtitle: "Obter informação de imagens ou vídeos.",
         description:
-          "Projetos relacionados a otimizações, visão computational e aprendizado por\
-        reforço."
+          ["Algoritmo para tirar informações de CNHs.", "Reconhecimento de objetos ou pessoas do mundo real."]
       },
       {
         imgs: [
           {
             label: "",
-            imgPath: "/tv.svg"
+            imgPath: "/data.svg"
           }
         ],
         title: "Automatização de Processos",
         subtitle: "Web scrapping, sistemas operacionais e APIs",
         description:
-          "Criação de scripts para burlar captchas ,extrair informações de páginas web, \
-          instalação de dependências de um projeto,testes de montecarlo utilizando APIS e  criação de planilhas. "
+          ["Burlar captchas.", "Extrair informações de páginas web.", "Configurar projetos em sistemas operacionais.", "Fazer testes estatísticos de performace.", "Automatizar tarefas manuais."]
       }
     ];
 

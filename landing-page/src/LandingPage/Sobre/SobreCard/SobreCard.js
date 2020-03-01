@@ -9,7 +9,8 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    height: "100%",
   },
   content: {
     display: "flex",

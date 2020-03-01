@@ -40,15 +40,20 @@ class Home extends React.Component {
         <CssBaseline />
         <Grid item xs={12}>
           <Typography className={classes.title} align="center">
-            Entre em contato conosco:
+            Contato
+          </Typography>
+          <Typography className={classes.text} align="center" variant="h2">
+            Quando quiser, fale conosco!
           </Typography>
           <br />
-          <Typography className={classes.text} align="center">
+            <a href="https://wa.me/5512997847924" style={{textDecoration: "none"}}>
+              <Typography className={classes.text} align="center">
+                Whatsapp: (12) 99784-7924
+              </Typography>
+            </a>
+            <Typography className={classes.text} align="center">
             Email: coffeeappsita@gmail.com
-          </Typography>
-          <Typography className={classes.text} align="center">
-            Whatsapp: (12) 99784-7924
-          </Typography>
+            </Typography>
         </Grid>
       </Grid>
     );
