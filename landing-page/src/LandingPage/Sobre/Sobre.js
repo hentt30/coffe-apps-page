@@ -1,36 +1,42 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import PropTypes from "prop-types";
+import styled from "styled-components";
+import SobreCard from "./SobreCard/SobreCard";
 import { withStyles } from "@material-ui/styles";
+import PropTypes from "prop-types";
 
 const styles = theme => ({
   root: {
     display: "flex",
-    height: "100vh",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
     minHeight: "100vh",
-    alignItems: "center",
-    width: "100%",
-    background: "#3df0b1"
+    width: "100vw"
   },
   title: {
     fontSize: "56px",
     fontFamily: "lato",
     fontWeight: "bold",
-    color: "#F5F5F5"
+    color: "#1D2A30"
   },
   text: {
     fontSize: "20px",
     fontFamily: "lato",
     display: "flex",
     justifyContent: "center",
-    textAlign: "center",
     color: "#1D2A30"
   },
   img: {
-    maxWidth: "683px",
-    width: "100%"
+    width: "180px",
+    height: "180px",
+    borderRadius: "50%"
+  },
+  card: {
+    paddingBottom: "8px",
+    paddingTop: "8px",
+
+    width: 300
   },
   description: {
     display: "flex",
@@ -39,68 +45,87 @@ const styles = theme => ({
   }
 });
 
-class Home extends React.Component {
+class Sobre extends React.Component {
   render() {
     const { classes } = this.props;
 
+    const DataCard = [
+      {
+        img: "/stitch.jpg",
+        title: "Henrique Fernandes",
+        subtitle:
+          "Olá, me chamo Henrique e sou engenheiro \
+        da computação no ITA. Sempre tive paixão por inovar\
+        e experimentar novas tecnologias. Iniciei minha carreira\
+        acadêmica adentrando em um grupo de pesquisa em robótica,\
+        no qual participei de várias competições de cunho nacional\
+        e internacional, tal como a Robocup. Após isso, comecei a\
+        desenvolver projetos pessoais e adentrar no mundo profissional,\
+        no qual acabei adentrando através da startup Quero Educação,\
+        na qual tive experiência com Data Science, principalmente com\
+         processamento de linguagem natural."
+      },
+      {
+        img: "/stitch.jpg",
+        title: "Henrique Fernandes",
+        subtitle:
+          "Olá, me chamo Henrique e sou engenheiro \
+        da computação no ITA. Sempre tive paixão por inovar\
+        e experimentar novas tecnologias. Iniciei minha carreira\
+        acadêmica adentrando em um grupo de pesquisa em robótica,\
+        no qual participei de várias competições de cunho nacional\
+        e internacional, tal como a Robocup. Após isso, comecei a\
+        desenvolver projetos pessoais e adentrar no mundo profissional,\
+        no qual acabei adentrando através da startup Quero Educação,\
+        na qual tive experiência com Data Science, principalmente com\
+         processamento de linguagem natural."
+      },
+      {
+        img: "/stitch.jpg",
+        title: "Henrique Fernandes",
+        subtitle:
+          "Olá, me chamo Henrique e sou engenheiro \
+        da computação no ITA. Sempre tive paixão por inovar\
+        e experimentar novas tecnologias. Iniciei minha carreira\
+        acadêmica adentrando em um grupo de pesquisa em robótica,\
+        no qual participei de várias competições de cunho nacional\
+        e internacional, tal como a Robocup. Após isso, comecei a\
+        desenvolver projetos pessoais e adentrar no mundo profissional,\
+        no qual acabei adentrando através da startup Quero Educação,\
+        na qual tive experiência com Data Science, principalmente com\
+         processamento de linguagem natural."
+      }
+    ];
     return (
-      <div className={classes.root} id="sobre">
-        <Grid container component="main" justify="space-evenly" xs={12}>
-          <CssBaseline />
-
-          <Grid item>
-            <img
-              className={classes.img}
-              src={window.location.origin + "/workteam.svg"}
-            />
+      <div
+        style={{
+          background: "#3df0b1",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center"
+        }}
+      >
+        <div className={classes.root} id="sobre">
+          <Grid
+            container
+            display="flex"
+            alignItems="center"
+            justify="space-evenly"
+          >
+            {DataCard.map(data => (
+              <Grid className={classes.card} item>
+                <SobreCard {...data} />
+              </Grid>
+            ))}
           </Grid>
-
-          <Grid item className={classes.description}>
-            <Typography className={classes.title} align="center">
-              Sobre Nós
-            </Typography>
-            <Typography className={classes.text}>
-              A Coffee APPs é uma Software House que surgiu no alojamento
-            </Typography>
-            <Typography className={classes.text}>
-              do Instituto Tecnológico de Aeronáutica (ITA)
-            </Typography>
-            <br />
-            <Typography className={classes.text}>
-              Ela é formada por dois programadores apaixonados por inovar.
-            </Typography>
-            <Typography className={classes.text}>
-              Apaixonados fortemente por aplicar novas tecnologias no cotidiano,
-            </Typography>
-            <Typography className={classes.text}>
-              uma base forte e uma paixão foram desenvolvendo-se continuamente.
-            </Typography>
-            <Typography className={classes.text}>
-              Tendo isso em conta, nosso principal foco é utilizar esse
-              conhecimento
-            </Typography>
-            <Typography className={classes.text}>
-              com o intuito de proporcionar soluções tecnológicas para
-            </Typography>
-            <Typography className={classes.text}>
-              pessoas físicas ou jurídicas
-            </Typography>
-            {/*<br />
-          <Typography className={classes.text}>
-            Os serviços oferecidos abrangem a confecção de apps, sites,
-          </Typography>
-          <Typography className={classes.text}>
-            projetos de data science e automatização de processos
-          </Typography>*/}
-          </Grid>
-        </Grid>
+        </div>
       </div>
     );
   }
 }
 
-Home.propTypes = {
+Sobre.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Sobre);

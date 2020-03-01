@@ -18,7 +18,9 @@ const useStyles = makeStyles({
     alignItems: "center"
   },
   img: {
-    height: "64px",
+    height: "180px",
+    width: "180px",
+    borderRadius: "50%",
     paddingBottom: "8px"
   },
   title: {
