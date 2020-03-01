@@ -66,9 +66,11 @@ class Projetos extends React.Component {
           }
         ],
         title: "Aplicativo",
-        subtitle: "Chatbot para Android, IPhone e Web.",
-        description:
-          ["Chatbot com sistema de login, cadastro e comunicação com uma API feita em Python que executava toda a lógica para gerar uma resposta ao usuário. Este aplicativo foi desenvolvido para Android, IPhone e Web."]
+        subtitle: "Chatbot para Android, IPhone e Web.\
+        ",
+        description: [
+          "Chatbot com sistema de login, cadastro e comunicação com uma API feita em Python que executava toda a lógica para gerar uma resposta ao usuário. Este aplicativo foi desenvolvido para Android, IPhone e Web."
+        ]
       },
       {
         imgs: [
@@ -83,12 +85,13 @@ class Projetos extends React.Component {
           {
             label: "Vídeos Recomendados",
             imgPath: "/inova6.png"
-          },
+          }
         ],
         title: "Aplicativo",
         subtitle: "Aplicação Web de vídeos no modelo do Netflix.",
-        description:
-          ["Aplicação Web com sistema de login, cadastro, exibição de vídeos e upload de vídeos. Nesta aplicação o dono da página realizava upload dos vídeos para os assinantes da plataforma."]
+        description: [
+          "Aplicação Web com sistema de login, cadastro, exibição de vídeos e upload de vídeos. Nesta aplicação o dono da página realizava upload dos vídeos para os assinantes da plataforma."
+        ]
       },
       {
         imgs: [
@@ -99,9 +102,12 @@ class Projetos extends React.Component {
         ],
         title: "Ciência de Dados",
         subtitle: "Machine learning para resolver desafios.",
-        description:
-            ["Pre-processamentos de dados.", "Modelagem de problemas que envolvam análise de dados.", "Criação de gráficos interativos.",
-              "Geração de conclusões e insights a partir dos dados."]
+        description: [
+          "Pre-processamentos de dados.",
+          "Modelagem de problemas que envolvam análise de dados.",
+          "Criação de gráficos interativos.",
+          "Geração de conclusões e insights a partir dos dados."
+        ]
       },
       {
         imgs: [
@@ -112,8 +118,12 @@ class Projetos extends React.Component {
         ],
         title: "Processamento de Linguagem",
         subtitle: "Uso de IA para entender e compor informações.",
-        description:
-          ["Reconhecimento de informações e intenções no texto.", "Filtragem de textos.", "Geração de textos e relatórios a partir de informações.", "Reconhecimento e transcrição de voz."]
+        description: [
+          "Reconhecimento de informações e intenções no texto.",
+          "Filtragem de textos.",
+          "Geração de textos e relatórios a partir de informações.",
+          "Reconhecimento e transcrição de voz."
+        ]
       },
       {
         imgs: [
@@ -124,8 +134,10 @@ class Projetos extends React.Component {
         ],
         title: "Visão Computacional",
         subtitle: "Obter informação de imagens ou vídeos.",
-        description:
-          ["Algoritmo para tirar informações de CNHs.", "Reconhecimento de objetos ou pessoas do mundo real."]
+        description: [
+          "Algoritmo para tirar informações de CNHs.",
+          "Reconhecimento de objetos ou pessoas do mundo real."
+        ]
       },
       {
         imgs: [
@@ -136,8 +148,13 @@ class Projetos extends React.Component {
         ],
         title: "Automatização de Processos",
         subtitle: "Web scrapping, sistemas operacionais e APIs",
-        description:
-          ["Burlar captchas.", "Extrair informações de páginas web.", "Configurar projetos em sistemas operacionais.", "Fazer testes estatísticos de performace.", "Automatizar tarefas manuais."]
+        description: [
+          "Burlar captchas.",
+          "Extrair informações de páginas web.",
+          "Configurar projetos em sistemas operacionais.",
+          "Fazer testes estatísticos de performace.",
+          "Automatizar tarefas manuais."
+        ]
       }
     ];
 

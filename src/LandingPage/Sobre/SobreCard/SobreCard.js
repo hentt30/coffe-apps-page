@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     justifyContent: "center",
-    height: "100%",
+    height: "100%"
   },
   content: {
     display: "flex",
@@ -48,7 +48,9 @@ export default function SimpleCard(props) {
           {props.title}
         </Typography>
         <Typography className={classes.subtitle} variant="body2" component="p">
-          {props.subtitle}
+          {props.subtitle.map(data => (
+            <Typography variant="p">{data}</Typography>
+          ))}
         </Typography>
       </CardContent>
     </Card>

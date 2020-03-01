@@ -11,14 +11,13 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
-import ImageStepper from './ImageStepper';
+import ImageStepper from "./ImageStepper";
 import styled from "styled-components";
 import Fab from "@material-ui/core/Fab";
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Grid from "@material-ui/core/Grid";
 
-const StyledCard = styled(Card)`
-`;
+const StyledCard = styled(Card)``;
 
 const StyledCardMedia = styled(CardMedia)`
   height: 355px;
@@ -46,7 +45,7 @@ export default class MediaCard extends React.Component {
   render() {
     return (
       <StyledCard>
-          <ImageStepper tutorialSteps={this.props.imgs} />
+        <ImageStepper tutorialSteps={this.props.imgs} />
         <CardActionArea onClick={this.handleClickOpen}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -55,7 +54,12 @@ export default class MediaCard extends React.Component {
             <Typography variant="body2" color="textSecondary" component="p">
               {this.props.subtitle}
             </Typography>
-            <Button size="small" color="inherit" style={{position: "absolute", right: 8, bottom: 8}}>
+            <br />
+            <Button
+              size="small"
+              color="inherit"
+              style={{ position: "absolute", right: 8, bottom: 8 }}
+            >
               <ExpandMoreIcon />
             </Button>
           </CardContent>
@@ -66,17 +70,12 @@ export default class MediaCard extends React.Component {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">
-            {this.props.title}
-          </DialogTitle>
+          <DialogTitle id="alert-dialog-title">{this.props.title}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               {this.props.description.map(data => (
-                  <Typography>
-                    {data}
-                  </Typography>
+                <Typography>{data}</Typography>
               ))}
-
             </DialogContentText>
           </DialogContent>
           <DialogActions>
