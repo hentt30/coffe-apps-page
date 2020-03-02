@@ -36,7 +36,7 @@ const styles = theme => ({
   card: {
     paddingBottom: "8px",
     paddingTop: "8px",
-    height: 550,
+    height: 600,
     width: 400
   },
   description: {
@@ -57,10 +57,10 @@ class Sobre extends React.Component {
         subtitle: [
           "Olá, me chamo Henrique e sou engenheiro \
         da computação no ITA. Sempre tive paixão por inovar\
-        e experimentar novas tecnologias. Iniciei minha carreira\
+        e experimentar novas tecnologias.", "Iniciei minha carreira\
         acadêmica adentrando em um grupo de pesquisa em robótica,\
         no qual participei de várias competições de cunho nacional\
-        e internacional, tal como a Robocup. Após isso, comecei a\
+        e internacional, tal como a Robocup.", "Após isso, comecei a\
         desenvolver projetos pessoais e adentrar no mundo profissional,\
         no qual acabei adentrando através da startup Quero Educação,\
         na qual tive experiência com Data Science, principalmente com\
@@ -72,11 +72,11 @@ class Sobre extends React.Component {
         title: "Coffee APPs",
         subtitle: [
           "A Coffee APPs é uma Software House que surgiu no alojamento\
-          do Instituto Tecnológico de Aeronáutica (ITA).\
+          do Instituto Tecnológico de Aeronáutica (ITA).", "\
           Ela é formada por dois programadores apaixonados por inovar.\
           Assim, nós, entusiasmados por aplicar novas tecnologias no cotidiano,\
-          construímos uma base forte e uma grande bagagem de projetos.\
-          Desse modo, nosso principal foco é utilizar esse conhecimento\
+          construímos uma base forte e uma grande bagagem de projetos.",
+          "Desse modo, nosso principal foco é utilizar esse conhecimento\
           em prol de proporcionar soluções tecnológicas para\
           pessoas físicas e jurídicas."
         ]
@@ -87,10 +87,10 @@ class Sobre extends React.Component {
         subtitle: [
           "Olá, sou o Rubens e estudo engenharia no ITA! Aqui no ITA, participei de um conceituado grupo\
           de robótica que possui premiações mundiais: onde\
-          desenvolvi pesquisas em Inteligência Artifical. Não somente, estagiei\
+          desenvolvi pesquisas em Inteligência Artifical.", "Não somente, estagiei\
           como Software Engineer na QuintoAndar, uma grande startup\
           brasileira e como Data Scientist na Up.p uma fintech pioneira\
-          no empréstimo entre pessoas. Simultâneamente, trabalhei\
+          no empréstimo entre pessoas.", "Simultâneamente, trabalhei\
           em outros projetos como: criar uma plataforma\
           com vídeos sobre educação empreendedora e criar uma assistente virtual\
           para ajudar pequenos negócios. Atualmente, desenvolvo Apps e produtos com inteligência artificial."

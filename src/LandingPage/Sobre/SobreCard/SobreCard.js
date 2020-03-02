@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     fontSize: 18
   },
   subtitle: {
-    textAlign: "center",
+    textAlign: "justify",
     fontSize: 14
   }
 });
@@ -49,7 +49,7 @@ export default function SimpleCard(props) {
         </Typography>
         <Typography className={classes.subtitle} variant="body2" component="p">
           {props.subtitle.map(data => (
-            <Typography variant="p">{data}</Typography>
+            <Typography variant="p">{data}<br /><br /></Typography>
           ))}
         </Typography>
       </CardContent>
