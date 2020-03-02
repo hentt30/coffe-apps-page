@@ -76,15 +76,15 @@ class Projetos extends React.Component {
         imgs: [
           {
             label: "Home dos Vídeos",
-            imgPath: "/inova4.png"
+            imgPath: "/inova1.svg"
           },
           {
             label: "Tela de Exibição",
-            imgPath: "/inova5.png"
+            imgPath: "/inova2.svg"
           },
           {
             label: "Vídeos Recomendados",
-            imgPath: "/inova6.png"
+            imgPath: "/inova3.svg"
           }
         ],
         title: "Aplicativo",
