@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         height: 50,
-        paddingLeft: theme.spacing(4),
+        justifyContent: 'center',
         backgroundColor: theme.palette.background.default,
     },
     img: {
