@@ -12,6 +12,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
 import ImageStepper from "./ImageStepper";
+import ImageView from "./ImageView";
 import styled from "styled-components";
 import Fab from "@material-ui/core/Fab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -29,8 +30,13 @@ export default class MediaCard extends React.Component {
     this.handleClickOpen = this.handleClickOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
 
+    this.handleClickOpenImage = this.handleClickOpenImage.bind(this);
+    this.handleCloseImage = this.handleCloseImage.bind(this);
+
+
     this.state = {
-      open: false
+      open: false,
+      open_image: false
     };
   }
 
@@ -42,10 +48,20 @@ export default class MediaCard extends React.Component {
     this.setState({ open: false });
   };
 
+  handleClickOpenImage = () => {
+    this.setState({ open_image: true });
+  };
+
+  handleCloseImage = () => {
+    this.setState({ open_image: false });
+  };
+
   render() {
     return (
       <StyledCard>
-        <ImageStepper tutorialSteps={this.props.imgs} />
+        <CardActionArea onClick={this.handleClickOpenImage}>
+          <ImageStepper tutorialSteps={this.props.imgs}/>
+        </CardActionArea>
         <CardActionArea onClick={this.handleClickOpen}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -80,6 +96,22 @@ export default class MediaCard extends React.Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
+              Fechar
+            </Button>
+          </DialogActions>
+        </Dialog>
+        <Dialog
+          open={this.state.open_image}
+          onClose={this.handleCloseImage}
+          maxWidth
+          fullWidth
+          aria-labelledby="max-width-dialog-title"
+        >
+          <DialogContent>
+             <ImageView tutorialSteps={this.props.imgs} />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.handleCloseImage} color="primary">
               Fechar
             </Button>
           </DialogActions>

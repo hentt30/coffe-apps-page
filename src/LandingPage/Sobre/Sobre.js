@@ -54,6 +54,7 @@ class Sobre extends React.Component {
       {
         img: "/stitch.jpg",
         title: "Henrique Fernandes",
+        linkedin: "https://www.linkedin.com/in/henriquefernandesa/",
         subtitle: [
           "Olá, me chamo Henrique e sou engenheiro \
         da computação no ITA. Sempre tive paixão por inovar\
@@ -84,12 +85,11 @@ class Sobre extends React.Component {
       {
         img: "/rubs.jpg",
         title: "Rubens Aguiar",
+        linkedin: "https://www.linkedin.com/in/rubensmgaguiar/",
         subtitle: [
-          "Olá, sou o Rubens e estudo engenharia no ITA! Aqui no ITA, participei de um conceituado grupo\
-          de robótica que possui premiações mundiais: onde\
-          desenvolvi pesquisas em Inteligência Artifical.", "Não somente, estagiei\
+          "Olá, me chamo Rubens e sou estudante de engenharia no ITA. Aqui no instituto, participei de um conceituado grupo pesquisas em robótica com premiações mundiais: onde desenvolvi pesquisas em Inteligência Artificial.", "Não somente, estagiei\
           como Software Engineer na QuintoAndar, uma grande startup\
-          brasileira e como Data Scientist na Up.p uma fintech pioneira\
+          brasileira, e como Data Scientist na Up.p uma fintech pioneira\
           no empréstimo entre pessoas.", "Simultâneamente, trabalhei\
           em outros projetos como: criar uma plataforma\
           com vídeos sobre educação empreendedora e criar uma assistente virtual\

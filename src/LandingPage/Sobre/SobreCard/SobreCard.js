@@ -24,6 +24,9 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     paddingBottom: "8px"
   },
+  linkedin: {
+    height: "24px"
+  },
   title: {
     fontSize: 18
   },
@@ -52,6 +55,17 @@ export default function SimpleCard(props) {
             <Typography variant="p">{data}<br /><br /></Typography>
           ))}
         </Typography>
+        {
+          props.linkedin ? 
+        (
+          <a href={props.linkedin}>
+            <img className={classes.linkedin} src={window.location.origin + "/linkedin.png"} />
+          </a>
+        ) 
+        : 
+        <div></div>
+        }
+
       </CardContent>
     </Card>
   );

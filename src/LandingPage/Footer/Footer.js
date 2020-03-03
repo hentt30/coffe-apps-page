@@ -45,7 +45,7 @@ class Footer extends React.Component {
                             Image App vector created by slidesgo - www.freepik.com
                         </Typography>
                     </a>
-                    <a href="www.flaticon.com" style={{textDecoration: "none"}}>
+                    <a href="https://www.flaticon.com" style={{textDecoration: "none"}}>
                         <Typography className={classes.text} align="center" variant="h2">
                             Icons made by Pixel perfect from www.flaticon.com
                         </Typography>
